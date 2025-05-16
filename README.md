@@ -30,7 +30,6 @@
 
 - Input layer matching feature dimensions
 
--
 - Hidden layers with ReLU activation
 
 - Dropout layers to prevent overfitting
