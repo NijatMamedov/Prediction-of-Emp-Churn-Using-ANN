@@ -55,3 +55,32 @@
 - Precision, Recall, F1-Score
 
 - ROC-AUC
+
+
+🚀 Deployment
+
+📥 Input new employee data
+
+- New employee information is entered directly as a dictionary or a DataFrame.
+
+🧼 Convert categorical columns to numeric format
+
+- Categorical variables like Education, Gender, City, and EverBenched are converted using One-Hot Encoding (get_dummies()).
+
+🧩 Align columns with what the model expects
+
+- Check if any columns used during training are missing in the new data; if so, add them with default value 0.
+
+- Make sure the column order matches the training data.
+
+📏 Scale the data using the same scaler
+
+- Use the StandardScaler instance that was fit during training to transform the new data accordingly (without saving/loading from disk).
+
+🧠 Make predictions using the trained ANN model
+
+- Feed the scaled data into the trained ANN model to get predictions (whether the employee will leave or not).
+
+📋 Add the prediction to the results
+
+- Append the prediction (e.g., a leaveornot column with values 0 or 1) to the original data to present the final result.
